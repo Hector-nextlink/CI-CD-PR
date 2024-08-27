@@ -28,6 +28,22 @@ jobs:
         run: |
           pip check
 
+      - name: Check pytest installation
+        run: |
+          pytest --version
+
+      - name: Check black installation
+        run: |
+          black --version
+
+      - name: Check isort installation
+        run: |
+          isort --version
+
+      - name: Check pylint installation
+        run: |
+          pylint --version
+
       - name: Run tests
         run: |
           pytest
